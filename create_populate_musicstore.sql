@@ -149,16 +149,3 @@ FROM hw5_original o
 JOIN track t ON (t.trackName, t.trackLength) = (o.TrackName, o.TrackLength)
 WHERE o.InvoiceId NOT NULL
 ORDER BY o.TrackName;
-
-
-
--- Find the best-selling artist and how much customers spent in buying this artist’s songs
-
-SELECT a2.artistName, round(SUM(i.quantity * i.unitPrice), 2) netBread
-FROM invoice_item i
-JOIN track t on i.trackID = t.trackID
-JOIN album a on t.albumID = a.albumID
-JOIN artist a2 on a.artistID = a2.artistID
-GROUP BY a2.artistID
-ORDER BY netBread DESC
-LIMIT 3;
