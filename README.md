@@ -31,7 +31,7 @@ To continue the process, you can execute this file and explore the resultant tab
 
 ```shell
 $ sqlite3 MusicStore.db
-sqlite> .read create.sql
+sqlite> .read create_populate_musicstore.sql
 sqlite> .tables
 sqlite> .fullschema
 sqlite>
@@ -48,6 +48,14 @@ JOIN artist a2 on a.artistID = a2.artistID
 GROUP BY a2.artistID
 ORDER BY netBread DESC
 LIMIT 3;
+```
+
+Which shows the top 3 artists as:
+
+```text
+Iron Maiden|138.6
+U2|105.93
+Metallica|90.09
 ```
 
 ## Data
