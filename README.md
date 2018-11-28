@@ -1,5 +1,7 @@
 # MSiA 413 Homework 5
 
+Link to repo: <https://github.com/tsarax/DB-HW5>
+
 The first part of this project answers various questions about the Entertainment Agency Dataset.
 
 Part 2 loads data about a music store from a CSV file into a single table in a new SQLite database. A series of CREATE and INSERT statements in the [create_populate_musicstore.sql](create_populate_musicstore.sql) file move the data into a normalized schema as [illustrated below](#Normalization)
@@ -18,7 +20,7 @@ pip install pandas
 
 ## Usage
 
-From the command line, navigate to the project directory (`path/to/DB-HW5/`)
+From the command line, navigate to the project directory (`cd path/to/DB-HW5/`)
 
 ```shell
 python3 loader.py
